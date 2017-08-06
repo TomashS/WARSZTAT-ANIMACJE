@@ -1,0 +1,445 @@
+body {
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.container1 {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    //border: 1px solid black;
+
+    .row:after,
+    .row:before {
+        content: ' ';
+        clear: both;
+    }
+
+    .row {
+        position: relative;
+        width: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //border: 1px solid black;
+        .text {
+            width: 160px;
+            height: 50px;
+            padding: 5px;
+            //border: 1px solid black;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .shape {
+            width: 100px;
+            height: 100px;
+            float: left;
+            //border: 1px solid black;
+            transform: scale(0.5);
+        }
+    }
+}
+
+.container2{
+    width: 800px;
+    height: 700px;
+    margin: 0 auto;
+    //border: 1px solid blue;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h6{
+        visibility: hidden;
+        padding: 3px;
+        border: 1px solid gray;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .dan{
+        font-family: Magneto;
+    }
+    .choc{
+        font-family: 'Arial Narrow';
+    }
+}
+
+.img1 {
+    background-image: url("../images/sprite.png");
+    background-position: 33.3% 100%;
+    overflow: hidden;
+}
+
+.img2 {
+    background-image: url("../images/sprite.png");
+    background-position: 0 100%;
+    overflow: hidden;
+}
+
+.img3 {
+    background-image: url("../images/sprite.png");
+    background-position: 66.6% 100%;
+    overflow: hidden;
+}
+
+.img4 {
+    background-image: url("../images/sprite.png");
+    background-position: 100% 100%;
+    overflow: hidden;
+}
+//animacja
+@keyframes slide-down1 {
+    0% {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+    }
+    100% {
+        visibility: visible;
+        position: absolute;
+        top: 100px;
+    }
+}
+@keyframes slide-down2 {
+    0% {
+        visibility: hidden;
+        position: absolute;
+        top: 100px;
+    }
+    100% {
+        visibility: visible;
+        position: absolute;
+        top: 200px;
+    }
+}
+@keyframes slide-down3 {
+    0% {
+        visibility: hidden;
+        position: absolute;
+        top: 200px;
+    }
+    100% {
+        visibility: visible;
+        position: absolute;
+        top: 300px;
+    }
+}
+@keyframes slide-down4 {
+    0% {
+        visibility: hidden;
+        position: absolute;
+        top: 300px;
+    }
+    100% {
+        visibility: visible;
+        position: absolute;
+        top: 400px;
+    }
+}
+@keyframes slide-aside-left {
+    0% {
+        position: absolute;
+        top: 24px;
+        left: 33.3%;
+    }
+    100% {
+        position: absolute;
+        top: 23px;
+        left: 0;
+    }
+}
+@keyframes slide-aside-right {
+    0% {
+        position: absolute;
+        top: 25%;
+        right: 33.3%;
+    }
+    100% {
+        position: absolute;
+        top: 25%;
+        right: 0;
+    }
+}
+@keyframes change-obrazek1 {
+    0% {
+        background-image: url("../images/sprite.png");
+        background-position: 33.3% 100%;
+        overflow: hidden;
+    }
+    100% {
+        background-image: url("../images/sprite.png");
+        background-position: 33.3% 0;
+        overflow: hidden;
+    }
+}
+@keyframes change-obrazek2 {
+    0% {
+        background-image: url("../images/sprite.png");
+        background-position: 0 100%;
+        overflow: hidden;
+    }
+    100% {
+        background-image: url("../images/sprite.png");
+        background-position: 0 0;
+        overflow: hidden;
+    }
+}
+@keyframes change-obrazek3 {
+    0% {
+        background-image: url("../images/sprite.png");
+        background-position: 66.6% 100%;
+        overflow: hidden;
+    }
+    100% {
+        background-image: url("../images/sprite.png");
+        background-position: 66.6% 0;
+        overflow: hidden;
+    }
+}
+@keyframes change-obrazek4 {
+    0% {
+        background-image: url("../images/sprite.png");
+        background-position: 100% 100%;
+        overflow: hidden;
+    }
+    100% {
+        background-image: url("../images/sprite.png");
+        background-position: 100% 0;
+        overflow: hidden;
+    }
+}
+@keyframes rozjazd-lewo1 {
+    0% {
+        position: absolute;
+        top: 100px;
+        left: 0;
+    }
+    100% {
+        position: absolute;
+        top: 100px;
+        left: -1200px;
+    }
+}
+@keyframes rozjazd-lewo2 {
+    0% {
+        position: absolute;
+        top: 300px;
+        left: 0;
+    }
+    100% {
+        position: absolute;
+        top: 300px;
+        left: -1200px;
+    }
+}
+@keyframes rozjazd-prawo1 {
+    0% {
+        position: absolute;
+        top: 200px;
+        right: 0;
+    }
+    100% {
+        position: absolute;
+        top: 200px;
+        right: -1200px;
+    }
+}
+@keyframes rozjazd-prawo2 {
+    0% {
+        position: absolute;
+        top: 400px;
+        right: 0;
+    }
+    100% {
+        position: absolute;
+        top: 400px;
+        right: -1200px;
+    }
+}
+
+@keyframes fru1 {
+    0%{
+        transform: scale(0.5) rotate(0deg);
+    }
+    2%{
+        transform:scale(0.5) rotate(-180deg);
+    }
+    100%{
+        transform:scale(0.5) rotate(-360deg);
+    }
+}
+@keyframes fru2 {
+    0%{
+        transform: scale(0.5) rotate(0deg);
+    }
+    2%{
+        transform:scale(0.5) rotate(180deg);
+    }
+    100%{
+        transform:scale(0.5) rotate(360deg);
+    }
+}
+
+
+@keyframes appearing {
+    0%{
+        visibility: visible;
+        transform: scale(0.01);
+    }
+    100%{
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+@keyframes h6-slide {
+    0%{
+        visibility: visible;
+        position: absolute;
+        top: -20px;
+        left: 0;
+    }
+    50%{
+        visibility: visible;
+        position: absolute;
+        top: 45%;
+        left: 0;
+    }
+    100%{
+        visibility: visible;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+    }
+}
+
+@keyframes kululu {
+    0%{
+        transform: scale(1) rotateX(0deg);
+    }
+    100%{
+        transform: scale(1) rotateX(360deg);
+    }
+}
+
+@keyframes vanishing {
+    0%{
+        opacity: 1;
+        letter-spacing: 1px;
+    }
+    100%{
+        opacity: 0;
+        letter-spacing: -6px;
+    }
+}
+// elementy
+.r1 {
+    visibility: hidden;
+    animation-name: slide-down1, rozjazd-lewo1;
+    animation-duration: 2s, 6s;
+    animation-delay: 0s, 18s;
+    animation-fill-mode: forwards;
+}
+
+.r2 {
+    visibility: hidden;
+    animation-name: slide-down2, rozjazd-prawo1;
+    animation-duration: 2s, 6s;
+    animation-delay: 2s, 18s;
+    animation-fill-mode: forwards;
+}
+
+.r3 {
+    visibility: hidden;
+    animation-name: slide-down3, rozjazd-lewo2;
+    animation-duration: 2s, 6s;
+    animation-delay: 4s, 18s;
+    animation-fill-mode: forwards;
+}
+
+.r4 {
+    visibility: hidden;
+    animation-name: slide-down4, rozjazd-prawo2;
+    animation-duration: 2s, 6s;
+    animation-delay: 6s, 18s;
+    animation-fill-mode: forwards;
+}
+
+.t1 {
+    animation-name: slide-aside-left;
+    animation-duration: 2s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+
+.t2 {
+    animation-name: slide-aside-left;
+    animation-duration: 2s;
+    animation-delay: 9s;
+    animation-fill-mode: forwards;
+}
+
+.t3 {
+    animation-name: slide-aside-left;
+    animation-duration: 2s;
+    animation-delay: 11s;
+    animation-fill-mode: forwards;
+}
+
+.t4 {
+    animation-name: slide-aside-left;
+    animation-duration: 2s;
+    animation-delay: 13s;
+    animation-fill-mode: forwards;
+}
+
+.img1 {
+    animation-name: slide-aside-right, change-obrazek1, fru1;
+    animation-duration: 2s, 0.001s, 6s;
+    animation-delay: 7s, 14s, 18s;
+    animation-fill-mode: forwards;
+}
+
+.img2 {
+    animation-name: slide-aside-right, change-obrazek2, fru2;
+    animation-duration: 2s, 0.001s, 6s;
+    animation-delay: 9s, 15s, 18s;
+    animation-fill-mode: forwards;
+}
+
+.img3 {
+    animation-name: slide-aside-right, change-obrazek3, fru1;
+    animation-duration: 2s, 0.001s, 6s;
+    animation-delay: 11s, 16s, 18s;
+    animation-fill-mode: forwards;
+}
+
+
+.img4 {
+    animation-name: slide-aside-right,change-obrazek4, fru2;
+    animation-duration: 2s, 0.001s, 6s;
+    animation-delay: 13s, 17s, 18s;
+    animation-fill-mode: forwards;
+}
+
+.choc,
+.dan {
+    visibility: hidden;
+    animation-name: appearing, kululu, vanishing;
+    animation-duration: 5s, 4s, 8s;
+    animation-delay: 20s, 29s, 30s;
+    animation-fill-mode: forwards;
+}
+
+h6 {
+    animation-name: h6-slide, kululu, vanishing;
+    animation-duration: 4s, 4s, 8s;
+    animation-delay: 25s, 29s, 30s;
+    animation-fill-mode: forwards;
+}
